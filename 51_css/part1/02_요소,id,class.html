@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,10 @@
 
     <style>
         /*
+        형식:
+        선택자 {속성:값;}
+
+    
         선택자 {속성:값;}
         1. 기본: id, class, 태그 이름, 전체, 그룹
         2. 결합자: 후손, 자식, 형제, 인접 형제
@@ -15,12 +20,18 @@
         4. 가상요소선택자
         5. 속성
         */
-        
-        
-        
+
+
+
         /* 
             우선순위:
             id > class > 요소
+
+            우선순위:
+            1. id
+            2. class, 가상 클래스, 속성
+            3. 요소(태그), 가상 요소
+
 
             id와 class의 이름 지정 방법
             1. 첫 글자는 영문자, _, - (숫자x)
@@ -30,15 +41,24 @@
         */
 
         /* 아이디(id) 선택자: #이름 */
-        #p1 {color: green;}
+        #p1 {
+            color: green;
+        }
 
         /* 클래스(class) 선택자: .이름 */
-        .p1 {color: blue;}
+        .p1 {
+            color: blue;
+        }
 
         /* 요소(타입, 태그) 선택자: 태그 이름으로 지정 */
-        p {color:red;}
+        p {
+            color: red;
+        }
+
+        /* body에 p요소를 선택하여 글자 색을 red로 지정한다. */
     </style>
 </head>
+
 <body>
     <h1>요소/아이디/클래스 선택자</h1>
     <p>나는 id와 class가 없습니다.</p>
@@ -50,4 +70,5 @@
     <p class="p1 p2">나는 class=p1, p2 입니다.</p>
     <p id="p3">나는 id=p3 입니다.</p>
 </body>
+
 </html>

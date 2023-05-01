@@ -14,7 +14,8 @@
                 선택자1은 조상(부모포함)
                 선택자2는 자손(자식포함)
             */
-            .s1 ul {color:red;}
+            /* .s1의 후손(자식,손자)인 p를 선택하여 글자색을 red로 지정한다. */
+            .s1 p {color: red;}
 
             /* 
                 자식선택자
@@ -23,7 +24,9 @@
                 선택자1은 부모
                 선택자2는 자식
             */
-            .s1 > ul {background-color:lightblue;}
+            /* 선택자의 우선순위가 같으면 아래쪽에 기록한 것이 적용된다. */
+            .s1 > p {background-color: blue;}
+
         </style>
     </head>
 
@@ -31,9 +34,9 @@
         <h1>후손/자식선택자</h1>
         <div class="s1">
             <div>
-                <p>나는 div의 자식이다.</p>
+                <p>나는 div.s1의 손자이다.</p>
                 <ul>
-                    <li>나는 div의 손자이다.</li>
+                    <li>나는 div.s1의 손자이다.</li>
                 </ul>
             </div>
             <ul>
