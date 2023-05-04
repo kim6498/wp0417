@@ -10,7 +10,7 @@
         .container {
             display: flex;
             flex-wrap: wrap;
-            border:1px solid orange;
+            border: 1px solid orange;
         }
 
         .container div {
@@ -19,33 +19,54 @@
 
         /* 교차축 세로 */
         .wrap1 .container {
-            height:200px;
+            height: 200px;
         }
+
         .wrap1 .container div {
-            width:100px;
+            width: 100px;
         }
 
         /* align-items보다 align-self가 우선적용된다. */
 
-        .ass {align-self: stretch;}
+        .ass {
+            align-self: stretch;
+        }
 
         /* (1) .asfs에 플렉스 아이템을 교차축의 시작에 정렬하기 위해 속성을 지정하시오. */
-
+        .asfs {
+            align-self: flex-start;
+        }
 
         /* (2) .asfe에 플렉스 아이템을 교차축의 끝에 정렬하기 위해 속성을 지정하시오. */
-
+        .asfe {
+            align-self: flex-end;
+        }
 
         /* (3) .asc에 플렉스 아이템을 교차축의 가운데 정렬하기 위해 속성을 지정하시오. */
-
+        .asc {
+            align-self: center;
+        }
 
         /* (4) .asb에 플렉스 아이템을 텍스트 아래 기준선에 맞춰 정렬하기 위해 속성을 지정하시오. */
+        .asb {
+            align-self: baseline;
+        }
 
+        .asb1 {
+            font-size: 3rem;
+        }
 
-        .asb1 {font-size: 3rem;}
-        .asb2 {font-size: 1rem;}
-        .asb3 {font-size: 2rem;}
-        .asb4 {font-size: 4rem;}
+        .asb2 {
+            font-size: 1rem;
+        }
 
+        .asb3 {
+            font-size: 2rem;
+        }
+
+        .asb4 {
+            font-size: 4rem;
+        }
     </style>
 </head>
 
