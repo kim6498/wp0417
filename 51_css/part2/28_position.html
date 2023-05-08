@@ -15,11 +15,12 @@
             position: static; (기본값)
 
             relative, absolute, fixed, sticky를 지정하면 left, right, top, bottom, z-index 속성을 사용할 수 있다.
+            (static이 아니면 left, right, top, bottom, z-index 속성을 사용할 수 있다.)
 
             position: relative; (자기자신)
-            position: absolute; (position이 static이 아닌 조상)
+            position: absolute; (position이 static이 아닌 조상/스테틱이 아닌 조상이 없으면 창기준이 됨 = 픽스드)
             position: fixed; (창)
-            position: sticky;
+            position: sticky; (IE에서는 동작하지 않는다.)
             
             left: 숫자px;
             top: 숫자px;
@@ -33,20 +34,26 @@
             height: 100px;
             background: red;
             /* left, top, right, bottom, z-index은 static에는 적용되지 않는다. */
-            left: 200px;
+            left: 200px; /* 왼쪽에서 200으로 이동한다는 뜻 */
             top: 100px;
         }
 
         /* (1) .pos1의 위치 속성을 static로 지정하시오. */
-
+        .pos1 {
+            position: static;
+        }
 
         /* (2) .pos2의 위치 속성을 relative로 지정하시오. */
         /* 자기자신 기준(즉, left를 적용하기 전 위치) */
+        .pos2 {
+            position: relative;
+        }
 
 
         /* static이 아닌 조상 기준 */
         /* (3) .pos3의 위치 속성을 absolute로 지정하시오. */
         .pos3 {
+            position: absolute;
             /* z-index의 값은 정수로 숫자가 클수록 위로 올라감. */
             z-index: 3;
         }
@@ -54,6 +61,7 @@
         /* 창 기준 */
         /* (4) .pos4의 위치 속성을 fixed로 지정하시오. */
         .pos4 {
+            position: fixed;
             z-index: 2;
         }
 

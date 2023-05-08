@@ -7,6 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS</title>
     <style>
+        /* 
+        @import를 @font-face 보다 위에 기록한다.
+        */
+
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap');
+
+        @font-face {
+            font-family: 'SeoulNamsanM';
+            src: url(../assets/font/SeoulNamsanM.woff) format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+/* 
+글꼴 포맷: *.ttf/*.otf, *woff, *eot(과거사용/현재는X)
+*/
+
         /* @font-face {
             font-family: 'SeoulNamsanL';
             src: url('/51_css/assets/font/SeoulNamsanL.ttf');
@@ -21,10 +38,14 @@
         */
 
         /* .ff1에 구글 Noto Sans KR 폰트를 CDN 방식으로 지정해 보세요. */
-
+        .ff1 {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
 
         /* .ff2에 서울 SeoulNamsanL 폰트를 @font-face 규칙을 사용하여 지정해 보세요. */
-
+        .ff2 {
+            font-family: 'SeoulNamsanM', sans-serif;
+        }
 
     </style>
 </head>
