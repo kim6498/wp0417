@@ -18,29 +18,57 @@
 
         .trf {
             display: inline-block;
-            width:100px;
-            height:100px;
+            width: 100px;
+            height: 100px;
             background: red;
             transition: .5s;
         }
 
         /* 
+            이동
+            transform: translateX(x);
+            transform: translateY(y);
+            transform: translate3d(x, y, z);
             transform: translate(x, y);
-            transform: scale(w, h);
+
+            크기조절
+            transform: scaleX(x);
+            transform: scaleY(y);
+            transform: scaleZ(z);
+            transform: scale3d(x, y, z);
+            transform: scale(x, y);
+
+            회전
+            transform: rotateX(각도); (단위: deg)
+            transform: rotateY(각도); (단위: deg)
+            transform: rotateZ(각도); (단위: deg)
+            transform: rotate3d(x, y, z각도); (단위: deg)
             transform: rotate(각도); (단위: deg)
-            transform: skew(각도, 각도) (단위: deg);
+
+            기울기
+            transform: skewX(각도, 각도) (단위: deg);
+            transform: skewY(각도, 각도) (단위: deg);
+            transform: skew(x각도, y각도) (단위: deg);
         */
 
         /* .outer에 마우스를 올렸을 때 .trftr의 위치를 가로로 100px 이동되게 하시오. */
-
+        .outer:hover .trftr {
+            transform: translate(100px, 0);
+            transform: translateX(100px);
+            /* 둘 다 같은 내용 */
+        }
 
         /* .outer에 마우스를 올렸을 때 .trfsc의 크기를 너비/높이 모두 1.2로 지정하시오. */
-
+        .outer:hover .trfsc {
+            transform: scale(1.2, 1.2);
+            transform: scaleX(1.2);
+        }
 
         .trfro {
             /* 변환의 기준 */
             transform-origin: 0 0;
         }
+
         /* .outer에 마우스를 올렸을 때 .trfro를 60도 회전되도록 지정하시오. */
 
 
@@ -51,8 +79,6 @@
 
 
         /* .outer에 마우스를 올렸을 때 .trfsk를 y축 기준으로 10도 기울이시오. */
-
-
     </style>
 </head>
 
