@@ -16,9 +16,13 @@
             1. 변하는 데이터(값)을 저장할 수 있는 메모리 공간이다.
             2. 한 개의 데이터만 저장할 수 있다. -> 새로운 데이터가 들어오면 기존 데이터는 삭제된다.
 
-            변수 선언
+            변수 선언 키워드(예약어) : var -> let, const
             var 변수명;
             var 변수명 = 값;
+            let 변수명;
+            let 변수명 = 값;
+            const 변수명; (X)
+            const 변수명 = 값;
 
             변수명 작성 규칙
             1. 첫 글자는 영문자(AZ 또는 az), 밑줄(_), 달러 기호($)로 시작한다.
@@ -29,6 +33,19 @@
 
             자바스크립트 예약어: https://www.w3schools.com/js/js_reserved.asp 
         */
+     
+        //변수선언
+        var box;
+        // box에 100을 할당한다.
+        // A=B는 B는 A에 할당한다. -> 할당(대입) 연산자
+        // A==B는 A와 B가 같다 -> 비교 연산자
+        box = 100;
+        // box에 30을 할당한다.
+        box = 30;
+
+        document.write(box); //변수
+        document.write('box'); //문자열
+        document.write(30); //숫자
 
     </script>
 </body>
