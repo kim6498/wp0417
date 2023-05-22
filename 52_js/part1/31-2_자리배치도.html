@@ -22,8 +22,8 @@
     <h1>자리 배치도</h1>
     <script>
         // 입력
-        let stuNum = prompt("학생은 몇 명인가요?");
         let colNum = prompt("한 줄에 몇 명씩 앉습니까?");
+        let stuNum = prompt("학생은 몇 명인가요?");
 
         // 처리
         if (stuNum % colNum === 0) {
@@ -35,7 +35,7 @@
         document.write("<table>");
         for (let i = 0; i < rowNum; i++) {
             document.write("<tr>");
-            for (let j = 0; j <= colNum; j++) {
+            for (let j = 1; j <= colNum; j++) {
                 seatNo = i * colNum + j;
                 if (seatNo > stuNum) break;
                 document.write("<td> 좌석 " + seatNo + " </td>");
