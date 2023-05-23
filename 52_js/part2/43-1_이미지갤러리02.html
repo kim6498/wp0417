@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <h1>이미지 갤러리</h1>
+    <h1>이미지 갤러리(롤링)</h1>
     <div id="galleryZone">
         <p>
             <!-- 인라인 스크립트 -->
@@ -37,12 +37,13 @@
         var num = 1;
         function gallery(direct) {
             if (direct) {
-                if (num == 8) return;
+                if (num == 8) num = 0;
                 num++;
             } else {
-                if (num == 1) return;
+                if (num == 1) num = 9;
                 num--;
             }
+            // console.log(num);
 
             var imgTag = document.getElementById('photo');
             imgTag.setAttribute('src', '../assets/pic_' + num + '.jpg');
