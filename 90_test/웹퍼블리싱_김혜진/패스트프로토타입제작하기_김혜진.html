@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>웹페이지_김혜진</title>
     <style>
         /* 초기화 */
         * {
@@ -20,22 +20,30 @@
 
         a {
             text-decoration: none;
-            color: black;
+            color: #ffffff;
         }
 
-        /* 레이아웃과 배경색 */
+        /* 레이아웃와 배경색 */
+        .background {
+            color: #ffffff;
+        }
+
+        .txtColor {
+            color: #333333;
+        }
+
         .wrap {
-            width: 1200px;
+            width: 100%;
         }
 
         header {
             height: 100px;
-            background: #ccc;
+            background: #ff761a;
         }
 
         section {
             position: relative;
-            height: 300px;
+            height: 500px;
             overflow: hidden;
         }
 
@@ -46,36 +54,40 @@
 
         /* 로고 */
         .logo {
+            position: relative;
             text-align: center;
             line-height: 100px;
+            animation: move 1s linear 2s infinite alternate;
         }
 
-        /* 메인타이틀 */
-        h2 {
-            position: absolute;
-            z-index: 9999;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 3rem;
-            color: #fff;
-            text-shadow: 1px 1px 5px #000;
+        @keyframes move {
+            0% {
+                left: 0;
+            }
+
+            100% {
+                left: 200px;
+            }
         }
 
-        /* 슬라이드를 하기 위한 준비 */
+        /* 슬라이드 */
         ul {
             position: absolute;
-            width: 100%;
             top: 0;
             left: 0;
             height: 400%;
             animation: slide 9s infinite;
         }
 
+        /* 폰트 */
+        .font {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+
         li {
-            background: #000;
             width: 100%;
-            height: 300px;
+            height: 500px;
             overflow: hidden;
         }
 
@@ -104,12 +116,12 @@
                 top: -300%;
             }
 
-            99.99999% {
+            99.99% {
                 top: -300%;
             }
 
             100% {
-                top: 0%;
+                top: 0;
             }
         }
     </style>
@@ -118,18 +130,21 @@
 <body>
     <div class="wrap">
         <header>
-            <h1 class="logo"><a href="#">이탈리아</a></h1>
+            <h1 class="logo"><a href="#">Korea</a></h1>
+            <p class="background">배경색</p>
+            <p class="txtColor">텍스트</p>
+            <p class="font">구글 웹 폰트(Google Web Font) 지정 했음.</p>
+
         </header>
-        <section class="section">
-            <h2>메인 타이틀</h2>
+        <section>
             <ul>
-                <li><img src="images/slide1.jpg" alt=""></li>
-                <li><img src="images/slide2.jpg" alt=""></li>
-                <li><img src="images/slide3.jpg" alt=""></li>
-                <li><img src="images/slide1.jpg" alt=""></li>
+                <li><img src="images/img01.jpg" alt="img01"></li>
+                <li><img src="images/img02.jpg" alt="img02"></li>
+                <li><img src="images/img03.jpg" alt="img03"></li>
+                <li><img src="images/img01.jpg" alt="img01"></li>
             </ul>
         </section>
-        <footer>copyright 2023 이탈리아. All light reserved.</footer>
+        <footer>Copyright 2023 김혜진. All rights reserved.</footer>
     </div>
 </body>
 
