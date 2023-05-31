@@ -47,10 +47,8 @@
         // 0(1월) ~ 11(12월)
         let mo = d.getMonth() + 1;
         let dd = d.getDate();
-
+        // 0(일) ~ 6(토)
         let we = d.getDay();
-        // 0(일) ~6(토)
-
         let hh = d.getHours();
         let mm = d.getMinutes();
         let ss = d.getSeconds();
@@ -62,7 +60,7 @@
         } else if (we === 2) {
             we = '화요일';
         } else if (we === 3) {
-            we= '수요일';
+            we = '수요일';
         } else if (we === 4) {
             we = '목요일';
         } else if (we === 5) {
@@ -71,14 +69,8 @@
             we = '토요일';
         }
 
-        document.write(yy + '년 ' + mo + '월 ' + dd + '일 (' + we + ') ' + hh + ':' + mm + ':' + dd, '<br>');
-        document.write(mo, '<br>');
-        document.write(dd, '<br>');
-        document.write(hh, '<br>');
-        document.write(mm, '<br>');
-        document.write(ss, '<br>');
-
-
+        document.write(yy + '년 ' + mo + '월 ' + dd + '일(' + we + ') ' + hh + ':' + mm + ':' + dd, '<br>');
+        
     </script>
 </body>
 

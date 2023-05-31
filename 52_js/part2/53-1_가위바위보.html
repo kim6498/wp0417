@@ -14,10 +14,19 @@
        /* 
             Math.random(): 0(포함) ~ 1(제외) 사이의 난수 반환
             Math.floor(숫자): 소수점 첫째 자리에서 내림한 정수 반환
-            Math.ceil(숫자): 소수점 첫째 자리에서 올림한 정수 반환
        */
+        // 0 ~ 1 사이 난수
+        // 0 <= Math.random() < 1
+        Math.random()
+
+        // 0 ~ 3 사이 난수
+        // 0 <= Math.random() * 3 < 3
+        // 0 ~ 3 사이 정수
+        Math.floor(Math.random() * 3)
 
         // 0 ~ 10 사이 난수
+        // 0 * 10 <= Math.random() * 10 < 1 * 10
+        // 0 <= Math.random() * 10 < 10
         Math.random() * 10;
 
         // 0 ~ 30 사이 임의 정수
@@ -44,7 +53,8 @@
             location.reload();
         }
 
-        var com = Math.ceil(Math.random() * 3);
+        // 0+1, 1+1, 2+1
+        var com = Math.floor(Math.random() * 3) + 1;
         document.write('<img src=\'../assets/math_img_' + com + '.jpg\'>');
 
         if (gameNum == com) {

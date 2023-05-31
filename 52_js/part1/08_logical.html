@@ -12,36 +12,41 @@
     <h1>연산자</h1>
     <script>
         /* 
-        피연산자: 1, 2
-        단항 연산자: ++, --, !, -3
-        이항 연산자: +, -, * /, %, **, >, >=, <=, ||, &&, ...
-        삼항 연산자: ? :
-
-        1+2
-        a++, ++a
+            피연산자: 1, 2 
+            단항 연산자: ++, --, !, -
+            이항 연산자: +, -, >, >=, <=, ||, &&, ...
+            삼항 연산자: ? :
+            
+            1 + 2
+            a++, ++a
+            !true
 
             논리 연산자: ||(또는), &&(그리고), !(아니다)
-            논리 연산의 피연산자와 결과는 ture 또는 false 이다.
+            논리 연산의 피연산자와 결과는 true 또는 false 이다.
 
-        true || true -> ture
-        true || false -> ture
-        false || true -> ture
-        false || false -> false
+            true || true -> true
+            true || false -> true
+            false || true -> true
+            false || false -> false
 
-        true && true -> ture
-        true && false -> false
-        false && true -> false
-        false && false -> false
+            true || false || true || false || false -> true
 
-        !ture = false
-        !false = ture
+            true && true -> true
+            true && false -> false
+            false && true -> false
+            false && false -> false 
 
-        연산자의 우선순위
-        1. ()
-        2. 산술
-        3. 비교
-        4.논리
-        5. 대입(할당)
+            true && false && true && true && true -> false 
+
+            !true -> false
+            !false -> true
+
+            연산자의 우선순위
+            1. ()
+            2. 산술
+            3. 비교
+            4. 논리
+            5. 대입
             
             연산자의 우선순위
             18. ()
@@ -59,24 +64,24 @@
             02. 삼항(조건): ? :
             * 왼쪽에서 오른쪽 방향으로 계산
 
+            1 + 2 + 3 + 4 -> 10
+
             우선순위 참고: https://www.w3schools.com/js/js_precedence.asp 
         */
 
         var a = 10;
         var b = 20;
-        var m = 30;
-        var n = 40;
         var result;
 
-        result = a < b || a > b;
+        result = a < b || a > b || a > b || a > b;
         document.write(result, '<br>');
 
-        result = a < b && a > b;
+        result = a < b && a < b && a > b && a > b;
         document.write(result, '<br>');
 
-        result = !(a > b);
+        result = !(a < b);
         document.write(result, '<br>');
-
+        
     </script>
 </body>
 

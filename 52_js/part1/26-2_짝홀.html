@@ -7,13 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS+JS</title>
     <style>
-        .blue {
-            color: blue;
-        }
-
-        .red {
-            color: red;
-        }
+        .blue {color:blue;}
+        .red {color:red;}
     </style>
 </head>
 
@@ -34,11 +29,11 @@
 
         while (i >= 10) {
             if (i % 2 === 0) {
-                //짝수
-                document.write('<p class="blue">' + i + '</p>');
+                // 짝수
+                document.write('<div class="blue">' + i + '</div>');
             } else {
-                //홀수
-                document.write('<p class="red">' + i + '</p>');
+                // 홀수
+                document.write('<div class="red">' + i + '</div>');
             }
             i--;
         }

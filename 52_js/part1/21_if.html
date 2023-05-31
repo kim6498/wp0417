@@ -11,31 +11,28 @@
 <body>
     <h1>if</h1>
     <script>
-        /*     
-html: 내용
-css: 디자인
-자바스크립트: 동적인 움직임(인터렉티브:상호작용)
-1. 어디에? (바디사이 스크립트 사이를 이용해서 내부 / 외부연결도 있음)
-2. 출력? document.write(), ..
-3. 변수? var, let, const
-4. 데이터? 문자열, 숫자, 부울, unsefined, null객체
-5. 연산자? 산술, 비교, 논리, 대입
-6. 제어문: 조건(선택), 반복
-7. 함수
-8. 객체
-9. 이벤트
+        /* 
+            자바스크립트: 동적, 인터렉티브(상호작용) 
+            1. 어디에?
+            2. 출력: document.write(), ..
+            3. 변수: 저장공간
+            4. 데이터: 문자열, 숫자, 부울, undefined, 객체
+            5. 연산자: 산술, 비교, 논리, 대입
+            6. 제어문: 조건(선택), 반복
 
+            // 조건식이 true(참)일 경우 코드를 실행
             if (조건식) {
                 코드;
             }
         */
 
         var num = 10;
+
         if (num < 500) {
-            document.write('hello', '<br>');
+            document.write('hello1', '<br>');
         }
 
-        // 조건식에 0, false, null, ''(빈 문자), undefined를 사용하면 false, 그 밖의 값은 true
+        // 조건식에 false, 0, null, ''(빈 문자), undefined를 사용하면 false, 그 밖의 값은 true
         var num2 = 3;
         if (num2) {
             document.write('hello2', '<br>');
@@ -45,7 +42,7 @@ css: 디자인
         if (num3) {
             document.write('hello3', '<br>');
         }
-
+        
     </script>
 </body>
 

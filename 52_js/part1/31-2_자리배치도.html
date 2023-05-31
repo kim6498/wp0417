@@ -20,10 +20,24 @@
 
 <body>
     <h1>자리 배치도</h1>
+    <table>
+        <tr>
+            <td>좌석 1</td>
+            <td>좌석 2</td>
+            <td>좌석 3</td>
+            <td>좌석 4</td>
+        </tr>
+        <tr>
+            <td>좌석 5</td>
+            <td>좌석 6</td>
+            <td>좌석 7</td>
+            <td>좌석 8</td>
+        </tr>
+    </table>
     <script>
         // 입력
-        let colNum = prompt("한 줄에 몇 명씩 앉습니까?");
         let stuNum = prompt("학생은 몇 명인가요?");
+        let colNum = prompt("한 줄에 몇 명씩 앉습니까?");
 
         // 처리
         if (stuNum % colNum === 0) {
@@ -38,11 +52,26 @@
             for (let j = 1; j <= colNum; j++) {
                 seatNo = i * colNum + j;
                 if (seatNo > stuNum) break;
-                document.write("<td> 좌석 " + seatNo + " </td>");
+                document.write("<td>좌석 " + seatNo + "</td>");
             }
             document.write("</tr>");
         }
         document.write("</table>")
+
+        // <table>
+        // <tr>
+        // <td>좌석 1</td>
+        // <td>좌석 2</td>
+        // <td>좌석 3</td>
+        // <td>좌석 4</td>
+        // </tr>
+        // <tr>
+        // <td>좌석 5</td>
+        // <td>좌석 6</td>
+        // <td>좌석 7</td>
+        // <td>좌석 8</td>
+        // </tr>
+        // </table>
     </script>
 </body>
 
