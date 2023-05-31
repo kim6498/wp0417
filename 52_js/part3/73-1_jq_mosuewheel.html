@@ -47,7 +47,17 @@
         지정하시오.
         */
 
-        $('div').on('mousewheel', function (e, delta) {
+/*         $('div').on('mousewheel', function (e, delta) {
+            if (delta > 0) {
+                // 마우스 휠을 올렸을 때 실행할 코드
+                $('div').css({background: 'red'});
+            } else if (delta < 0) {
+                // 마우스 휠을 내렸을 때 실행할 코드
+                $('div').css({background: 'blue'});
+            }
+        });
+ */
+        $('div').mousewheel(function (e, delta) {
             if (delta > 0) {
                 // 마우스 휠을 올렸을 때 실행할 코드
                 $('div').css({background: 'red'});
