@@ -31,10 +31,19 @@
         /* 
         목록 중에 하나를 클릭하면 클릭한 것만 빨간색 글자로 바뀌도록 해보자.
         */
+        //nth-of-type(n), nth-child(n)
+        //익명 함수: function(){}
        
-       $('li').click(function(){
-        $('li').css({color: 'red'});
-       });
+        /* $('li:nth-of-type(1)').click(function(){
+         $('li:nth-of-type(1)').css({color: 'red'});
+        });
+        */
+
+        $('li').click(function () {
+            //this란? 클릭한 li
+            $(this).css({ color: 'red' });
+        });
+
     </script>
 </body>
 

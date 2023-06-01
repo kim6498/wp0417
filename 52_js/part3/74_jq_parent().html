@@ -15,9 +15,34 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script>
         /* 
+        제이쿼리 메서드
+        1. 이벤트 메서드: click(), mouseenter(),...
+        2. 탐색 메서드 ~ 선택자의 연장선
+        
+        HTML COM 요소를 선택하는 방법
+        1. 선택자: id, class, 태그
+
+        2. 탐색 메서드
+        - parent(): 부모 선택
+        - children(): 자식 선택
+        - siblings(): 형제 선택
+        - find(): 후손 하위 요소(자식+손자) 선택
+        - eq(): n번째 요소를 선택, n=0,1,2,...
+        - prev(): 선택한 요소의 이전 요소 선택
+        - next(): 선택한 요소의 이후 요소 선택
+        - not(): 선택한 요소 제외
+
+        3. 효과 메서드
+
             $('선택자').parent() ~ 부모 요소 선택
         */
 
+        /* 
+        .text1 클래스의 부모를 선택하여
+        1px 두께의 빨간색 실선 테두리를 지정하시오.
+        */
+
+        $('.txt1').parent().css({border: '1px solid red'});
         
 
     </script>
