@@ -11,12 +11,14 @@
             font-size: 20px;
             margin-left: 50px;
         }
+
         div {
             width: 200px;
             height: 200px;
             background: #888;
             margin: 50px;
         }
+
         div.on {
             width: 400px;
             height: 400px;
@@ -38,6 +40,25 @@
             $('선택자').addClass('클래스') ~ 요소의 클래스 추가
             $('선택자').removeClass('클래스') ~ 요소의 클래스 제거
         */
+
+        /* 
+        첫 번째 목록을 클릭하면
+        박스가 커지면서 배경색상이 빨강으로
+        두 번째 목록을 클릭하면
+        박스가 작아지면서 회색으로
+        */
+        // 첫 번째 목록
+        //$('li:nth-child(1)') ~ css선택자
+        //$('li:eq(0)') ~ 선택자
+        //$('li').eq(0) ~ 메서드
+
+        $('li').eq(0).click(function(){
+            //div에 on클래스 추가 -> div가 커지면서 빨강
+            $('div').addClass('on');
+        });
+        $('li').eq(1).click(function(){
+            $('div').removeClass('on');
+        });
 
     </script>
 </body>

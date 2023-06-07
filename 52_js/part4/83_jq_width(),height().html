@@ -21,13 +21,21 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script>
-        /* 
+        /*
             $('선택자').width() ~ 요소의 너비 반환
             $('선택자').height() ~ 요소의 높이 반환
             $('선택자').width(값) ~ 요소의 너비 설정
             $('선택자').height(값) ~ 요소의 높이 설정
         */
-
+        /* 
+        div를 클릭하면 div의 높이를 div의 너비로 지정하시오.
+        박스를 클릭하면 박스의 높이를 너비와 같은 크기로 지정하시오.
+        */
+       $('div').click(function(){
+        let w = $('div').width();
+        // div의 높이를 div의 너비로 지정한다.
+        $('div').height(w);
+       });
     </script>
 </body>
 
