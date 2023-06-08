@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,8 +13,11 @@
             border: 1px solid red;
             margin: 20px;
         }
-        img {width:100%;}
-        
+
+        img {
+            width: 100%;
+        }
+
         .bg1 {
             background-color: yellow;
             background-image: url(/51_css/assets/20220511_1124.jpg);
@@ -23,16 +27,19 @@
         }
 
         /* bg2 클래스에 bg1 클래스에 지정한 것과 같은 동일한 배경 속성을 속기 속성으로 지정해 보세요. */
-       /* 대략 순서: 색 url 반복 위치/크기(위치다음크기 <-임의안돼) 고정 오리진 클립 (위치 크기 제외하고 임의가능) */
+        /* 대략 순서: 색 url 반복 위치/크기(위치다음크기 <-임의안돼) 고정 오리진 클립 (위치 크기 제외하고 임의가능) */
         .bg2 {
-            background: yellow url(/51_css/assets/20220511_1124.jpg) no-repeat left/contain/* 위치 슬래시 크기 이건 세트라고 보면됨 */;
+            background: yellow url(/51_css/assets/20220511_1124.jpg) no-repeat left/contain
+                /* 위치 슬래시 크기 이건 세트라고 보면됨 */
+            ;
         }
-
     </style>
 </head>
+
 <body>
     <h1>배경 속기 속성</h1>
     <div class="bg1"></div>
     <div class="bg2"></div>
 </body>
+
 </html>
